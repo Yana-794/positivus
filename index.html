@@ -1206,7 +1206,7 @@
         </header>
         <div class="section__body">
           <div class="contact-us">
-            <form class="contact-us__form">
+            <form class="contact-us__form" novalidate data-js-form>
               <fieldset class="contact-us__request-types radios">
                 <legend class="radios__title visually-hidden">Request type</legend>
                 <label class="radios__item radio">
@@ -1216,6 +1216,9 @@
                     name="request-tape"
                     value="Say Hi"
                     checked
+                    required
+                    aria-errormessage="password-errors"
+
                   />
                   <span class="radio__emulator"></span>
                   <span class="radio__label">Say Hi</span>
@@ -1226,6 +1229,9 @@
                     class="radio__input visually-hidden"
                     name="request-tape"
                     value="Get a Quote"
+                    required
+                    aria-errormessage="password-errors"
+
                   />
                   <span class="radio__emulator"></span>
                   <span class="radio__label">Get a Quote</span>
@@ -1239,6 +1245,8 @@
                     id="name"
                     name="name"
                     placeholder="Name"
+                    required
+                    aria-errormessage="name-errors"
                   />
                 </div>
                 <div class="contact-us__field field">
@@ -1250,6 +1258,9 @@
                     placeholder="Email"
                     type="email"
                     required
+                    aria-errormessage="email-errors"
+                    pattern="^\S+@\S+\.\S+$"
+                    title="Указанный формат: user@example.com"
                   />
                 </div>
                 <div class="contact-us__field field">
