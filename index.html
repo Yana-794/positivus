@@ -1236,6 +1236,7 @@
                   <span class="radio__emulator"></span>
                   <span class="radio__label">Get a Quote</span>
                 </label>
+                  <span class="field__errors" id="password-errors" data-js-form-field-errors></span>
               </fieldset>
               <div class="contact-us__body">
                 <div class="contact-us__field field">
@@ -1248,6 +1249,7 @@
                     required
                     aria-errormessage="name-errors"
                   />
+                    <span class="field__errors" id="name-errors" data-js-form-field-errors></span>
                 </div>
                 <div class="contact-us__field field">
                   <label class="field__label" for="email">Email*</label>
@@ -1262,6 +1264,7 @@
                     pattern="^\S+@\S+\.\S+$"
                     title="Указанный формат: user@example.com"
                   />
+                    <span class="field__errors" id="email-errors" data-js-form-field-errors></span>
                 </div>
                 <div class="contact-us__field field">
                   <label class="field__label" for="message">Message*</label>
@@ -1271,7 +1274,11 @@
                     name="message"
                     placeholder="Message"
                     required
+                    minlength="70"
+                    title="Сообщение должно содержать минимум 70 символов"
+                    aria-errormessage="message-errors"
                   ></textarea>
+                    <span class="field__errors" id="message-errors" data-js-form-field-errors></span>
                 </div>
               </div>
               <button class="contact-us__button button" type="submit">
