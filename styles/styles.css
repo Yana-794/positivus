@@ -343,6 +343,27 @@ h1, h2, h3, h4 {
   }
 }
 
+.field:has([required]) .field__label::after,
+.radios:has([required]) .radios__legend::after {
+  content: "*";
+  padding-inline: 0.25em;
+  color: red;
+}
+
+.field__errors {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4em;
+  margin-top: 0.5em;
+  font-size: 0.8em;
+  color: red;
+  line-height: 1.25;
+}
+
+.field__errors:empty {
+  display: none;
+}
+
 .radio {
   display: flex;
   align-items: center;
