@@ -109,4 +109,4 @@ document.addEventListener('submit', (event) => this.onSubmit(event))
 }
 
 
-new FormValidation 
+new FormValidation()
